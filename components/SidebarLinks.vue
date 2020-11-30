@@ -4,8 +4,11 @@
     v-if="items.length"
   >
     <li v-for="(item, i) in items" :key="i">
+      <a v-if="item.external" :href="item.external" :download="item.download" :target="item.target || '_blank'">
+        {{ item.title }}
+      </a>
       <SidebarGroup
-        v-if="item.type === 'group'"
+        v-else-if="item.type === 'group'"
         :item="item"
         :open="i === openGroupIndex"
         :collapsable="item.collapsable || item.collapsible"
