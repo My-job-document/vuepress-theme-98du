@@ -245,6 +245,7 @@ function resolveItem (item, pages, base, groupDepth = 1) {
       type: 'group',
       path: item.path,
       title: item.title,
+      external: item.external,
       sidebarDepth: item.sidebarDepth,
       children: children.map(child => resolveItem(child, pages, base, groupDepth + 1)),
       collapsable: item.collapsable !== false
