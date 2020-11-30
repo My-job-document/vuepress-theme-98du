@@ -4,9 +4,21 @@
     v-if="items.length"
   >
     <li v-for="(item, i) in items" :key="i">
-      <a v-if="item.external" :href="item.external" :download="item.download" :target="item.target || '_blank'">
-        {{ item.title }}
-      </a>
+      <section
+        v-if="item.external"
+        class="sidebar-group"
+        :class="[
+          {
+            collapsable: item.collapsable,
+            'is-sub-group': depth !== 0
+          },
+          `depth-${depth}`
+        ]"
+      >
+        <a :href="item.external" :download="item.download" :target="item.target || '_blank'">
+          {{ item.title }}
+        </a>
+      </section>
       <SidebarGroup
         v-else-if="item.type === 'group'"
         :item="item"
