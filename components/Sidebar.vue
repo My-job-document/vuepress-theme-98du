@@ -1,5 +1,5 @@
 <template>
-  <aside class="sidebar">
+  <aside v-show="$route.path !== '/'" class="sidebar">
     <slot name="top"/>
     <NavLinks/>
     <SidebarLinks :depth="0" :items="items"/>
