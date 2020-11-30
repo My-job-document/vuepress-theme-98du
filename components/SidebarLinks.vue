@@ -15,7 +15,7 @@
           `depth-${depth}`
         ]"
       >
-        <a :href="item.external" :download="item.download" :target="item.target || '_blank'">
+        <a class="sidebar-heading" :href="item.external" :download="item.download" :target="item.target || '_blank'">
           {{ item.title }}
         </a>
       </section>
