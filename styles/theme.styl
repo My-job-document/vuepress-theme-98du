@@ -79,8 +79,6 @@ body
     border-radius 4px
   img
     max-width 100%
-  *:first-child
-    margin-top 0
 
 .content__default.custom
   padding 0
@@ -184,11 +182,13 @@ table:not(.el-table__header):not(.el-table__body)
 
   tr
     border-top 1px solid var(--border-color)
+    width 100%
     &:nth-child(2n)
       background-color var(--code-color)
 
   th, td
     border 1px solid var(--border-color)
+    width 100%
     padding .6em 1em
 
 .theme-container
