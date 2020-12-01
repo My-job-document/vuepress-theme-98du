@@ -2,7 +2,7 @@
   <router-link
     class="nav-link"
     :to="link"
-    v-if="!isExternal(link)"
+    v-if="!isExternal(link) && !item.isExternal"
     :exact="exact">
     <i :class="`iconfont ${item.icon}`"></i>
     {{ item.text }}
