@@ -11,7 +11,7 @@
     v-else
     :href="link"
     class="nav-link external"
-    :target="isMailto(link) || isTel(link) ? null : '_blank'"
+    :target="item.target || isMailto(link) || isTel(link) ? null : '_blank'"
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >
     <i :class="`iconfont ${item.icon}`"></i>
