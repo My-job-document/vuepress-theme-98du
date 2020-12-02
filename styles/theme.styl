@@ -19,6 +19,24 @@
 
 .home-center.content__default
   display: none
+
+.footer-wrapper
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: #626468;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 960px;
+  box-sizing: border-box;
+  transform: translateX(-50%);
+
+.theme-container .home .features
+  margin-top: 4rem
+
+html, body, #app
+  height 100%
 /* 自定义 结束 */
 
 html, body
@@ -186,9 +204,11 @@ table:not(.el-table__header):not(.el-table__body)
     &:nth-child(2n)
       background-color var(--code-color)
 
+  thead, tbody
+    width 100%
+
   th, td
     border 1px solid var(--border-color)
-    width 100%
     padding .6em 1em
 
 .theme-container
